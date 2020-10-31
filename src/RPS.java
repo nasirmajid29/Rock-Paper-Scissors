@@ -75,9 +75,9 @@ public class RPS {
 
   public GameObj moveScanner(Scanner scanner) {
     while (true) {
-      String move = scanner.next();
+      String move = scanner.next().toUpperCase();
       if (isValidEnum(move)) {
-        return GameObj.valueOf(move.toUpperCase());
+        return GameObj.valueOf(move);
 
       } else {
         System.out.println("Invalid move, Please try again");
@@ -103,8 +103,6 @@ public class RPS {
     if(response.equals("Y")){
       String[] args = new String[0];
       main(args);
-    }else{
-      return;
     }
   }
   
